@@ -17,7 +17,7 @@ app.post('/pricing', function(req, res) {
     const requestData = JSON.stringify(req.body);
     console.log('requestData: ' + req.body.productIds);
     console.log('isArray: ' + Array.isArray(req.body.productIds));
-    
+
     let token = req.headers['authorization']; 
     // Remove Bearer from string
     token = token.replace(/^Bearer\s+/, "");
@@ -52,5 +52,6 @@ app.post('/pricing', function(req, res) {
     
 });
 
-app.listen(3000); 
+app.listen(process.env.PORT || 3000);
+ 
 
