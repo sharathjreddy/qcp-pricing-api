@@ -1,12 +1,15 @@
 [
     {
-        "productId" : "prod1",
+        "productId" : "10KWHBATTERY",
         "price" : 200
     },
     {
-        "productId" : "prod2",
+        "productId" : "4PORTUSBHUB",
         "price": 300
     }
 ]
+
+
+
 
 

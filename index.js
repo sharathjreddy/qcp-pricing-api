@@ -37,13 +37,13 @@ app.post('/pricing', function(req, res) {
             console.log('productId: ' + productId);
             console.log('pricingEntry: ' + JSON.stringify(pricingEntry)); 
             if (productId === pricingEntry.productId) {
-                prices.push([ productId , pricingEntry.price]); 
+                prices.push({ "productId" : productId , "price" : pricingEntry.price });    
                 foundMatch = true;
             }    
         })
         //If no match found, set default price of 100 
         if (!foundMatch) {
-            prices.push({ "productId" : productId, "price" : 100 }); 
+            prices.push({ "productId" : productId, "price" : 100 });  
         }
     });
     res.setHeader('Content-Type', 'application/json');
