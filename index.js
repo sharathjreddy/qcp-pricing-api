@@ -42,9 +42,11 @@ app.post('/pricing', function(req, res) {
             }    
         })
         //If no match found, set default price of 100 
+        /*
         if (!foundMatch) {
             prices.push({ "productId" : productId, "price" : 100 });  
         }
+        */
     });
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ "prices": prices }));
