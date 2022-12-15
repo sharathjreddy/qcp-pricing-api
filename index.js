@@ -20,7 +20,7 @@ app.post('/pricing', function(req, res) {
 
     let token = req.headers['authorization']; 
     // Remove Bearer from string
-    token = token.replace(/^Bearer\s+/, "");
+    token = token.replace(/^Bearer\s+/, "");  
 
     if (!token || token !== secret) {
         return res.json({
